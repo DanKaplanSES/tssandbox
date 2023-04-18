@@ -1,0 +1,78 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": false,
+    "jasmine": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:testcafe/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "State": "writable",
+    "setup": "writable"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "testcafe"
+  ],
+  "rules": {
+    "quotes": [
+      "off"
+    ],
+    "no-plusplus": [
+      "off"
+    ]
+  },
+  "ignorePatterns": [
+    "tsc/**/*.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/no-misused-promises": [
+          2
+        ],
+        "@typescript-eslint/no-floating-promises": [
+          2
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "off"
+        ],
+        "@typescript-eslint/camelcase": [
+          "off"
+        ],
+        "@typescript-eslint/triple-slash-reference": [
+          "off"
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "off"
+        ],
+        "@typescript-eslint/no-non-null-assertion": [
+          "off"
+        ],
+        "@typescript-eslint/no-non-null-asserted-optional-chain": [
+          "off"
+        ],
+        "prefer-const": [
+          "warn"
+        ]
+      }
+    }
+  ]
+}
