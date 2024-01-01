@@ -5,10 +5,12 @@
     "node": false,
     "jasmine": true
   },
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "prettier",
-    "plugin:testcafe/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -16,63 +18,31 @@
     "State": "writable",
     "setup": "writable"
   },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
-    "project": "./tsconfig.json"
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "testcafe"
-  ],
-  "rules": {
-    "quotes": [
-      "off"
-    ],
-    "no-plusplus": [
-      "off"
+    "project": [
+      "./tsconfig.json",
+      "./tsconfig.src.json",
+      "./tsconfig.test.json"
     ]
   },
   "ignorePatterns": [
-    "tsc/**/*.js"
+    "dist",
+    "node_modules"
   ],
-  "overrides": [
-    {
-      "files": [
-        "**/*.ts"
-      ],
-      "extends": [
-        "plugin:@typescript-eslint/recommended"
-      ],
-      "rules": {
-        "@typescript-eslint/no-misused-promises": [
-          2
-        ],
-        "@typescript-eslint/no-floating-promises": [
-          2
-        ],
-        "@typescript-eslint/no-empty-function": [
-          "off"
-        ],
-        "@typescript-eslint/camelcase": [
-          "off"
-        ],
-        "@typescript-eslint/triple-slash-reference": [
-          "off"
-        ],
-        "@typescript-eslint/no-unused-vars": [
-          "off"
-        ],
-        "@typescript-eslint/no-non-null-assertion": [
-          "off"
-        ],
-        "@typescript-eslint/no-non-null-asserted-optional-chain": [
-          "off"
-        ],
-        "prefer-const": [
-          "warn"
-        ]
-      }
-    }
-  ]
+  "rules": {
+    "prettier/prettier": "error",
+    "quotes": ["off"],
+    "no-plusplus": ["off"],
+    "curly": ["error", "all"],
+    "@typescript-eslint/no-misused-promises": [2],
+    "@typescript-eslint/no-floating-promises": [2],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/camelcase": ["off"],
+    "@typescript-eslint/triple-slash-reference": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-non-null-assertion": ["off"],
+    "@typescript-eslint/no-non-null-asserted-optional-chain": ["off"],
+    "prefer-const": ["warn"]
+  }
 }

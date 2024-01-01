@@ -1,0 +1,11 @@
+{
+  "spec_dir": "",
+  "spec_files": ["**/*.spec.ts"],
+  "helpers": [
+    "spec/support/logger.js",
+    "spec/support/type-check.js",
+    "test/init-logger.ts"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": true
+}
