@@ -1,6 +1,6 @@
 {
-  "name": "package-name",
-  "description": "package description",
+  "name": "jasmine-ts-example",
+  "description": "A working example of a TypeScript project using the Jasmine test framework.",
   "version": "0.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -15,7 +15,7 @@
     "test": "jasmine",
     "run": "npm run build && node dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["jasmine", "ts", "typescript", "node-ts"],
   "devDependencies": {
     "@types/jasmine": "^5.1.4",
     "@types/node": "^20.10.6",
