@@ -27,7 +27,8 @@
   },
   "ignorePatterns": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "spec/support"
   ],
   "rules": {
     "prettier/prettier": "error",
