@@ -4,7 +4,7 @@
   "helpers": [
     "spec/support/logger.js",
     "spec/support/type-check.js",
-    "test/init-logger.ts"
+    "spec/support/slow-spec-reporter.js"
   ],
   "stopSpecOnExpectationFailure": false,
   "random": true

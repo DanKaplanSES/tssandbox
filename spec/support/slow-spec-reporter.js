@@ -1,4 +1,4 @@
-// This works under Jasmine 2.3
+// To enable, add as a helper in your jasmine config file
 var slowSpecsReporter = {
   specStarted: function(result) {
     this.specStartTime = Date.now()
