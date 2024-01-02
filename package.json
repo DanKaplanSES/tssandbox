@@ -13,12 +13,11 @@
     "compile-typescript": "tsup",
     "build": "tsup",
     "test": "jasmine",
-    "run": "npm run tsc && node dist/index.js"
+    "run": "npm run build && node dist/index.js"
   },
   "keywords": [],
   "devDependencies": {
     "@types/jasmine": "^5.1.4",
-    "@types/jsdom": "^21.1.6",
     "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "eslint": "^8.56.0",
@@ -26,7 +25,6 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-testcafe": "^0.2.1",
     "jasmine": "^5.1.0",
-    "jsdom": "^23.0.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "tsup": "^8.0.1",
