@@ -1,5 +1,7 @@
+import { myBool } from './index';
+
 describe(`index`, () => {
   it(`passes`, () => {
-    expect(true).toEqual(false);
+    expect(myBool).toEqual(true);
   });
 });
